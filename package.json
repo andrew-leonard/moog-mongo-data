@@ -1,0 +1,16 @@
+{
+  "name": "mongo-data-katana",
+  "version": "1.0.1",
+  "description": "Utilities to add katana data to mongo",
+  "main": "main.js",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "mongodb": "3.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Moogsoft Inc",
+  "license": "ISC"
+}
