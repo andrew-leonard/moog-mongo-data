@@ -35,13 +35,6 @@ The following command will add in an event to the system to simulate an anomaly.
 node main.js --add_event
 ```
 
-### push an event to kafka
-The following command will push an event to a kafka bus running locally to your environment. Default Moogsoft Observe configuration is expected.
-
-```
-node main.js --send_event
-```
-
 ---
 ## Contributing
 For any contributions, please submit pull requests.
