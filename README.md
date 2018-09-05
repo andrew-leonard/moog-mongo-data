@@ -6,10 +6,16 @@ Module to allow users to populate a mongo db with Moogsoft Observe specific info
 These instructions will get you a copy of the module up and runnning and provide examples for how you would populate your test environment.
 
 ### Installing
-Simple as running
+Install required modules
 ```
 npm install
 ```
+If mongo is not running locally, change connection code in heat_insert.js, rollup_indexes.js, event_module.js to reflect location of mongo.
+
+```
+const url = 'mongodb://localhost:12071/';
+```
+
 ---
 ## Examples
 Detailed below are some examples for you
