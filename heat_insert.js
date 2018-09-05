@@ -63,7 +63,7 @@ module.exports = {
                     if (err) throw err;
                     const words = data.split('\n');
                     const docs = [];
-                    for(let i = 0; i < words.length; i += 1) {
+                    for(let i = 0; i < numberOfDocs; i += 1) {
                         docs.push({
                             metric: 'cpu',
                             counts: 2,
