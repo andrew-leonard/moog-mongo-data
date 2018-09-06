@@ -3,6 +3,7 @@ const argv = require('minimist')(process.argv.slice(2));
 
 const rollup_indexes_data = require('./rollup_indexes_insert');
 const heatModule = require('./heat_insert');
+const eventModule = require('./event_module');
 
 if (!argv.rollup_indexes && !argv.heat_indexes && !argv.add_event) {
     console.error('Missing input parameters. Please read the README file to find out the parameters to pass to the module.');

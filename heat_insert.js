@@ -1,6 +1,6 @@
 const MongoClient = require('mongodb').MongoClient;
 const fs = require('fs');
-const url = 'mongodb://localhost:32811/';
+const url = 'mongodb://localhost:27017/';
 
 var dbObj;
 var dbClient;

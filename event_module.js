@@ -1,7 +1,7 @@
 // Module to insert events to mongo and corresponding datums
 const MongoClient = require('mongodb').MongoClient;
 const fs = require('fs');
-const url = 'mongodb://localhost:32811/';
+const url = 'mongodb://localhost:27017/';
 
 var dbObj;
 var dbClient;
@@ -35,10 +35,9 @@ module.exports = {
                 source: 'localhost',
                 type: 'abc'
             }
-            dbObj.collection('rollup_indexes').insert(docs, (err, res) => {
+            dbObj.collection('events').insert(eventDoc, (err, res) => {
                 if (err) throw err;
                 console.log('event document inserted');
-                // dbClient.close();
             });
 
             const datums = [{
@@ -123,8 +122,9 @@ module.exports = {
             }];
             dbObj.collection('rollups.raw').insertMany(datums, (err, res) => {
                 if (err) throw err;
-                console.log('datums inserted to mongo');
+                console.log('datums inserted to mongo, terminating application');
                 dbClient.close();
+                process.exit();
             });
         });
     }
