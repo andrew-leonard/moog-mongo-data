@@ -40,6 +40,18 @@ module.exports = {
                 console.log('event document inserted');
             });
 
+            const bitWiseEvent = {
+                timed_at_ms: 1514836860000,
+                severity: 5,
+                class: 'moog:test:Test',
+                source: 'localhost',
+                type: 'bit'
+            }
+            dbObj.collection('events').insert(bitWiseEvent, (err, res) => {
+                if (err) throw err;
+                console.log('bitwise event doc inserted');
+            });
+
             const datums = [{
                 data: { value: 4 },
                 written_at_ms: 1514836795000,
@@ -119,7 +131,190 @@ module.exports = {
                 timed_at_ms: 1514836805000,
                 key: '',
                 processed: true
+            }, {
+                written_at_ms: 1514836805000,
+                timed_at_ms: 1514836805000,
+                year: 2018,
+                week: 1,
+                minute: 0,
+                second: 5,
+                hour: 12,
+                additional_data: '',
+                metric: 'bit',
+                fully_qualified_moob: 'moog:test:Test',
+                moob: 'moog:test:Test',
+                source: 'localhost',
+                timezone: 'UTC',
+                data: {
+                    bit1: true,
+                    bit2: true,
+                    noBit: 'abc'
+                },
+                engine: {
+                    LEARNING: false,
+                    WATCH_KEY: ["bit1", "bit2"],
+                    DETECTOR_CLASS: 'CBitwiseDetector'
+                },
+                processed: true,
+                key: ''
+            }, {
+                written_at_ms: 1514836810000,
+                timed_at_ms: 1514836810000,
+                year: 2018,
+                week: 1,
+                minute: 0,
+                second: 10,
+                hour: 12,
+                additional_data: '',
+                metric: 'bit',
+                fully_qualified_moob: 'moog:test:Test',
+                moob: 'moog:test:Test',
+                source: 'localhost',
+                timezone: 'UTC',
+                data: {
+                    bit1: true,
+                    bit2: false,
+                    noBit: 'abc'
+                },
+                engine: {
+                    LEARNING: false,
+                    WATCH_KEY: ["bit1", "bit2"],
+                    DETECTOR_CLASS: 'CBitwiseDetector'
+                },
+                processed: true,
+                key: ''
+            }, {
+                written_at_ms: 1514836815000,
+                timed_at_ms: 1514836815000,
+                year: 2018,
+                week: 1,
+                minute: 0,
+                second: 15,
+                hour: 12,
+                additional_data: '',
+                metric: 'bit',
+                fully_qualified_moob: 'moog:test:Test',
+                moob: 'moog:test:Test',
+                source: 'localhost',
+                timezone: 'UTC',
+                data: {
+                    bit1: true,
+                    bit2: true,
+                    noBit: 'abc'
+                },
+                engine: {
+                    LEARNING: false,
+                    WATCH_KEY: ["bit1", "bit2"],
+                    DETECTOR_CLASS: 'CBitwiseDetector'
+                },
+                processed: true,
+                key: ''
+            }, {
+                written_at_ms: 1514836820000,
+                timed_at_ms: 1514836820000,
+                year: 2018,
+                week: 1,
+                minute: 0,
+                second: 20,
+                hour: 12,
+                additional_data: '',
+                metric: 'bit',
+                fully_qualified_moob: 'moog:test:Test',
+                moob: 'moog:test:Test',
+                source: 'localhost',
+                timezone: 'UTC',
+                data: {
+                    bit1: true,
+                    bit2: false,
+                    noBit: 'abc'
+                },
+                engine: {
+                    LEARNING: false,
+                    WATCH_KEY: ["bit1", "bit2"],
+                    DETECTOR_CLASS: 'CBitwiseDetector'
+                },
+                processed: true,
+                key: ''
+            }, {
+                written_at_ms: 1514836830000,
+                timed_at_ms: 1514836830000,
+                year: 2018,
+                week: 1,
+                minute: 0,
+                second: 30,
+                hour: 12,
+                additional_data: '',
+                metric: 'bit',
+                fully_qualified_moob: 'moog:test:Test',
+                moob: 'moog:test:Test',
+                source: 'localhost',
+                timezone: 'UTC',
+                data: {
+                    bit1: true,
+                    bit2: false,
+                    noBit: 'abc'
+                },
+                engine: {
+                    LEARNING: false,
+                    WATCH_KEY: ["bit1", "bit2"],
+                    DETECTOR_CLASS: 'CBitwiseDetector'
+                },
+                processed: true,
+                key: ''
+            }, {
+                written_at_ms: 1514836850000,
+                timed_at_ms: 1514836850000,
+                year: 2018,
+                week: 1,
+                minute: 0,
+                second: 50,
+                hour: 12,
+                additional_data: '',
+                metric: 'bit',
+                fully_qualified_moob: 'moog:test:Test',
+                moob: 'moog:test:Test',
+                source: 'localhost',
+                timezone: 'UTC',
+                data: {
+                    bit1: true,
+                    bit2: true,
+                    noBit: 'abc'
+                },
+                engine: {
+                    LEARNING: false,
+                    WATCH_KEY: ["bit1", "bit2"],
+                    DETECTOR_CLASS: 'CBitwiseDetector'
+                },
+                processed: true,
+                key: ''
+            }, {
+                written_at_ms: 1514836860000,
+                timed_at_ms: 1514836860000,
+                year: 2018,
+                week: 1,
+                minute: 1,
+                second: 0,
+                hour: 12,
+                additional_data: '',
+                metric: 'bit',
+                fully_qualified_moob: 'moog:test:Test',
+                moob: 'moog:test:Test',
+                source: 'localhost',
+                timezone: 'UTC',
+                data: {
+                    bit1: true,
+                    bit2: false,
+                    noBit: 'abc'
+                },
+                engine: {
+                    LEARNING: false,
+                    WATCH_KEY: ["bit1", "bit2"],
+                    DETECTOR_CLASS: 'CBitwiseDetector'
+                },
+                processed: true,
+                key: ''
             }];
+            console.log(`preparing to insert ${datums.length} datums`);
             dbObj.collection('rollups.raw').insertMany(datums, (err, res) => {
                 if (err) throw err;
                 console.log('datums inserted to mongo, terminating application');
